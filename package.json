@@ -1,0 +1,24 @@
+{
+  "name": "DIYAcademy",
+  "version": "1.0.0",
+  "description": "Learn to be as resourceful as MacGyver himself!",
+  "repository": {
+    "type": "git",
+    "url": "ggj@192.168.13.242:guyvers/macgamejam.git"
+  },
+  "author": "Gyvers",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^8.1.1",
+    "connect-livereload": "^0.5.2",
+    "express": "^4.11.1",
+    "gulp": "^3.8.10",
+    "gulp-browserify": "^0.5.1",
+    "reactify": "^1.0.0",
+    "tiny-lr": "^0.1.4"
+  },
+  "dependencies": {
+    "react": "^0.12.2",
+    "react-router": "^0.11.6"
+  }
+}
