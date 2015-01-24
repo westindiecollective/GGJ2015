@@ -2,7 +2,16 @@ body {
   background: #f5f5f5;
   min-height: 100%;
   display: table;
-  font-family: Bitter, serif;
+  font-family: "Coustard", serif;
+}
+
+h2 {
+  font-variant: small-caps;
+  color: #BE1B12;
+  text-shadow: 2px 2px 0 #E6CB08,
+               -2px 2px 0 #E6CB08,
+               2px -2px 0 #E6CB08,
+               -2px -2px 0 #E6CB08;
 }
 
 section {
@@ -25,4 +34,37 @@ section {
   background: #fff;
   box-shadow: 0 5px 10px #ddd;
   border: 1px solid #eee;
+}
+
+/* Objects */
+.objects {
+  text-align: center;
+}
+
+.objects li {
+  display: inline-block;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  text-align: center;
+  line-height: 100px;
+  background: #5A5FB7;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Dropzone */
+.dropzone {
+  background: #eee;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.dropzone p {
+  border: 5px dashed #ccc;
+  text-align: center;
+  color: #ccc;
+  padding: 10px;
+  border-radius: 10px;
 }
