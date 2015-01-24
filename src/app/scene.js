@@ -3,8 +3,8 @@ var React = require('react');
 var Scene = React.createClass({
   render: function () {
   
-    var items = this.props.items.map(function (item, index) {
-      return <li key={index}><img alt={item} /></li>;
+    var items = this.props.items.map(function (item) {
+      return <li key={item}><img alt={item} /></li>;
     });
   
     return (
