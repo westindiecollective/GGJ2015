@@ -36,22 +36,30 @@ section {
   border: 1px solid #eee;
 }
 
-/* Objects */
-.objects {
+/* Item List */
+.item-list {
   text-align: center;
+  padding: 0;
 }
 
-.objects li {
+.item-list li {
   display: inline-block;
+  position: relative;
+  line-height: 100px;
+}
+
+.item-list li a {
+  display: block;
   border-radius: 50%;
   width: 100px;
   height: 100px;
   margin: 5px;
+  margin-left: 10px;
   text-align: center;
   line-height: 100px;
   background: #5A5FB7;
   color: #fff;
-  cursor: pointer;
+  text-decoration: none;
 }
 
 /* Dropzone */
@@ -61,10 +69,29 @@ section {
   border-radius: 10px;
 }
 
-.dropzone p {
-  border: 5px dashed #ccc;
+.dropzone .item-list li.empty a {
   text-align: center;
   color: #ccc;
-  padding: 10px;
-  border-radius: 10px;
+  background: #ddd;
+}
+
+.dropzone .item-list li.empty a span {
+  display: block;
+}
+
+.dropzone .item-list li:not(:first-child) {
+  padding-left: 20px;
+}
+
+.dropzone .item-list li:not(:first-child)::before {
+  content: "+";
+  position: absolute;
+  font-size: 48px;
+  left: 0;
+  padding: 5px 0;
+  color: #333;
+}
+
+.dropzone .item-list li:last-child::before {
+  content: "=";
 }
