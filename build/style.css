@@ -1,0 +1,28 @@
+body {
+  background: #f5f5f5;
+  min-height: 100%;
+  display: table;
+  font-family: Bitter, serif;
+}
+
+section {
+  display: inline-block;
+  vertical-align: top;
+  display: table-cell;
+}
+
+.intro {
+  width: 30%;
+}
+
+.room {
+  min-height: 100%;
+}
+
+.container {
+  margin: 10px;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 5px 10px #ddd;
+  border: 1px solid #eee;
+}
