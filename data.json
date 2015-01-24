@@ -1,0 +1,117 @@
+{
+          "heading": [
+            "I'm going to roll the stats for a fucking",
+            "Check this shit out, I'm going to be a fucking",
+            "You think your character is cool? My character is a fucking"
+        ],
+
+        "response": [
+            "That sounds fucking terrible",
+            "Give me a-fucking-nother one",
+            "I don't really give a fuck about that guy",
+            "I've already fucking roleplayed that one",
+            "That doesn't make any fucking sense"
+        ],
+
+        "template": [
+            "@location where @challenge"
+        ],
+
+        "items": [
+           "pencil",
+           "teacher",
+           "board",
+           "paper clip",
+           "dunce",
+           "fire extinguisher",
+           "window",
+           "door",
+           "glue",
+           "yellow taxi",
+           "Statue of Liberty",
+           "David Copperfield",
+           "trombone",
+           "hipster",
+           "tapas",
+           "sombrero",
+           "poncho",
+           "Eiffel Tower",
+           "Arc de Triomphe",
+           "luxurious clothes",
+           "twingo",
+           "mexicans",
+           "spanish dictionary",
+           "mayan relic",
+           "pickaxe",
+           "dynamite",
+           "coronesses",
+           "computers",
+           "sweets",
+           "organiser",
+           "cables",
+           "fishes",
+           "The Little Mermaid",
+           "fishing net",
+           "old forgotten treasure",
+           "cap",
+           "jean",
+           "rapper",
+           "IP camera",
+           "alcool",
+           "peanuts",
+           "arcade stick",
+           "galette saucisse",
+           "plane",
+           "kerosene",
+           "pilot",
+           "luggage",
+           "customs"
+           "flare gun",
+           "lever",
+           "sub-machine gun",
+           "striped jersey",
+           "enigma machine",
+           "nazi zombies"
+           "Godwin's law"
+
+        ],
+
+        "location": [
+          "1st Class in DIY Academy",
+          "New York",
+          "Paris",
+          "Mexico",
+          "an old mine"
+          "a villa ruled by the mafia",
+          "the Jardin Moderne during a game jam",
+          "the Death Valley",
+          "a computer",
+          "a music festival",
+          "the Black Sea",
+          "a rap contenders",
+          "in a bar",
+          "in the STUNFEST",
+          "a old town in a desert",
+          "a running train attacked by an helicopter",
+          "an hot-air balloon loosing altitude",
+          "a mad bus",
+          "a nazi submarine",
+          "an aerodrome"
+        ],
+
+        "challenge": [
+          {
+            "description": "",
+            "combinaison": [
+              {
+                "items": ["a", "b"],
+                "result": ""
+              },
+              {
+                "items": [],
+                "results": ""
+              }
+            ]
+          }
+        ]
+}
