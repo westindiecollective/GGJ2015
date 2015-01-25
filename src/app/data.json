@@ -103,7 +103,7 @@
   "challenge": [
     {
       "description": "the door is locked.",
-      "combinaison": [
+      "combinations": [
         {
           "items": ["pencil", "paper clip"],
           "result": "The pencil and paper clip make a makeshift door key."
@@ -112,7 +112,7 @@
     },
     {
       "description": "a bomb is going to explode.",
-      "combinaison": [
+      "combinations": [
         {
           "items": ["cables", "screwdriver"],
           "result": "No problem, the bomb is disabled."
@@ -121,7 +121,7 @@
     },
     {
       "description": "a hostage situation is in progress.",
-      "combinaison": [
+      "combinations": [
         {
           "items": ["poncho", "sombrero"],
           "result": "You knock out the bad guys, incognito ninja style!"
@@ -130,7 +130,7 @@
     },
     {
       "description": "mother Michelle has lost her cat.",
-      "combinaison": [
+      "combinations": [
         {
           "items": ["fans", "fishes"],
           "result": "The smell attracts the cat back home."
@@ -139,7 +139,7 @@
     },
     {
       "description": "there are nazis zombies who came from the dark side of the moon.",
-      "combinaison": [
+      "combinations": [
         {
           "items": ["lighter", "deodorant"],
           "result": "I love the smell of burning zombies in the morning!"
@@ -148,7 +148,7 @@
     },
     {
       "description": "you need to take out the helicopters.",
-      "combinaison": [
+      "combinations": [
         {
           "items": ["laser", "magnifying glass"],
           "result": "The helicopters were destroyed by the focused laser."
@@ -157,7 +157,7 @@
     },
     {
       "description": "you need to save the president!",
-      "combinaison": [
+      "combinations": [
         {
           "items": ["luggage", "mexicans"],
           "result": "A mexican dude just saved the president!"
@@ -166,7 +166,7 @@
     },
     {
       "description": "you need to save humanity!",
-      "combinaison": [
+      "combinations": [
         {
           "items": ["Godwin's law", "teacher"],
           "result": "Humanity sadly remembers history."
@@ -175,7 +175,7 @@
     },
     {
       "description": "you gotta face the final boss, Chuck Norris.",
-      "combinaison": [
+      "combinations": [
         {
           "items": ["Chuck Norris", "Chuck Norris"],
           "result": "You beat the game. Oh yeah."
