@@ -6,6 +6,7 @@ var Route = Router.Route,
 
 var Home = require('./home');
 var Game = require('./game');
+var GameOver = require('./gameover');
 var End = require('./end');
 
 var Buzz = require('node-buzz');
@@ -29,6 +30,7 @@ var routes = (
     <Route name="home" handler={Home}/>
     <Route name="game" handler={Game}/>
     <Route name="success" handler={End}/>
+    <Route name="failure" handler={GameOver}/>
     <DefaultRoute handler={Home}/>
   </Route>
 );
