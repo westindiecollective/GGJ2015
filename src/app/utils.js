@@ -21,7 +21,7 @@ function shuffle(collection) {
     
 function sample(collection, n) {
   var length = collection.length;
-  return length > 0 ? collection[baseRandom(0, length - 1)] : undefined;
+  //return length > 0 ? collection[baseRandom(0, length - 1)] : undefined;
   var result = shuffle(collection);
   result.length = Math.min(n < 0 ? 0 : (+n || 0), result.length);
   return result;

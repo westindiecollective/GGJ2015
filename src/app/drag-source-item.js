@@ -5,24 +5,29 @@ var DragSourceItem = React.createClass({
   mixins: [DragDropMixin],
   
   configureDragDrop: function(registerType) {
-   return registerType('item', {
-     dragSource: {
-       beginDrag: function() {
-         console.log('Drag');
-         return {
-           item: {
-             name: this.props.name
-           }
-         };
-       }
-     }
-   });
- },
+    return registerType('item', {
+      dragSource: {
+        beginDrag: function() {
+          return {
+            item: {
+              name: this.props.name
+            }
+          };
+        }
+      }
+    });
+  },
   
   render: function () {
-    var isDragging = this.getDragState('item');
+    var isDragging = this.getDragState('item').isDragging;
     
-    return <img alt="Drag source test" style={{opacity: isDragging ? 0.2 : 1}} />;
+    return (
+      <li {...this.dragSourceFor('item')} style={{ opacity: isDragging ? 0.2 : 1 }}>
+        <div>
+          {this.props.name}
+        </div>
+      </li>
+    );
   }
 });
 
