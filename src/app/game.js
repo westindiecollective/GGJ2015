@@ -1,4 +1,5 @@
 var React = require('react');
+var Navigation = require('react-router').Navigation;
 
 var utils = require('./utils');
 
@@ -13,6 +14,8 @@ var Scene = require('./scene');
 var data = require('./data.json');
 
 var Game = React.createClass({
+
+  mixins: [Navigation],
 
   getInitialState: function () {
   
@@ -90,11 +93,15 @@ var Game = React.createClass({
         return comb.items.indexOf(item) != -1;
       });
     });
-        
-    this.setState({
-      success: successes.length > 0,
-      result: this.state.challenge.combinations[0].result
-    });
+
+    if (successes.length > 0) {       
+      this.setState({
+        success: successes.length > 0,
+        result: this.state.challenge.combinations[0].result
+      });
+    } else {
+      this.transitionTo('end');
+    }
   },
 
   render: function () {

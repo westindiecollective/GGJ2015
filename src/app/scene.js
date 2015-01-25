@@ -36,7 +36,9 @@ var Scene = React.createClass({
             </ul>
           </div>
 
-          <button onClick={this.props.onTestCombination}>Do it!</button>
+          <br />
+
+          <button className='button' onClick={this.props.onTestCombination}>Do it!</button>
         </div>
       </section>
     );
