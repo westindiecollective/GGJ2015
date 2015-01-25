@@ -2,6 +2,8 @@ var React = require('react');
 var Link = require('react-router').Link;
 var Navigation = require('react-router').Navigation;
 
+var Buzz = require('node-buzz');
+
 var Home = React.createClass({
   
   mixins: [Navigation],
@@ -9,12 +11,25 @@ var Home = React.createClass({
   start: function (e) {
     e.preventDefault();
     window.username = this.refs.usernameInput.getDOMNode().value;
+    this.state.explosion1.play();
+    this.state.opening.stop();
     this.transitionTo('game');
+  },
+  
+  getInitialState: function() {
+    return {
+      explosion1: new Buzz.sound("sounds/explosion1", {formats: [ "mp3", "wav" ]}),
+      opening: new Buzz.sound("sounds/opening", {formats: [ "mp3", "wav" ]}),
+    };
+  },
+  
+  playMusic: function() {
+    this.state.opening.play();
   },
   
   render: function() {
     return (
-      <section className='home'>
+      <section className='home' onLoad={this.playMusic}>
         <h1><abbr title='Do It Yourself'>DIY</abbr> Academy</h1>
         <p>Come and learn the best pratices to solve every problem in less time than a time bomb have to explode.</p>
         
