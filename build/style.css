@@ -109,7 +109,7 @@ section > .container {
   line-height: 100px;
 }
 
-.item-list li a {
+.item-list li div {
   display: block;
   border-radius: 50%;
   width: 100px;
