@@ -6,8 +6,8 @@ var Story = React.createClass({
     if (!!this.props.success) {
       var successMessage = (
         <div>
-          <h2>Well done!</h2>
-          <p>MacLorem MacIpsum</p>
+          <h2>Yeehaw!</h2>
+          <p>{this.props.result}</p>
           <button onClick={this.props.onNext}>Next &rarr;</button>
         </div>
       );
@@ -20,7 +20,7 @@ var Story = React.createClass({
           <h2>Scene #{this.props.counter}</h2>
           <p>{this.props.content}</p>
           
-          <p>So, what do we do now ?</p>
+          <p>So, what do we do now?</p>
           
           { successMessage }
         </div>
