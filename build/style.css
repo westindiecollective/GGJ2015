@@ -79,28 +79,28 @@ section {
   text-decoration: none;
 }
 
-/* Dropzone */
-.dropzone {
+/* Drop-zone */
+.drop-zone {
   background: #eee;
   padding: 5px 10px;
   border-radius: 10px;
 }
 
-.dropzone .item-list li.empty a {
+.drop-zone .item-list li.empty a {
   text-align: center;
   color: #bbb;
   background: #ddd;
 }
 
-.dropzone .item-list li.empty a span {
+.drop-zone .item-list li.empty a span {
   display: block;
 }
 
-.dropzone .item-list li:not(:first-child) {
+.drop-zone .item-list li:not(:first-child) {
   padding-left: 20px;
 }
 
-.dropzone .item-list li:not(:first-child)::before {
+.drop-zone .item-list li:not(:first-child)::before {
   content: "+";
   position: absolute;
   font-size: 48px;
@@ -109,7 +109,7 @@ section {
   color: #333;
 }
 
-.dropzone .item-list li:last-child::before {
+.drop-zone .item-list li:last-child::before {
   content: "=";
 }
 

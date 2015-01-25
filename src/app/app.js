@@ -33,7 +33,7 @@ var App = React.createClass({
     return (
       <div id='root'>
         <Story content={this.state.scene} onNext={this.nextChallenge} counter={this.state.counter}></Story>
-        <Scene items={this.state.items}></Scene>
+        <Scene items={this.state.items} result='Cooked ham'></Scene>
       </div>
     );
   }
