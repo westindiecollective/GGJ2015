@@ -112,6 +112,7 @@ section > .container {
   display: inline-block;
   position: relative;
   /*line-height: 100px;*/
+  vertical-align: middle;
 }
 
 .item-list li img, .item-list li div {
