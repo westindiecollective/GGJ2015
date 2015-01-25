@@ -3,6 +3,10 @@ var React = require('react'),
     DropZoneItem = require('./drop-zone-item');
 
 var Scene = React.createClass({
+  getFilename: function(name) {
+    return 'items/' + name.toLowerCase().replace(/\s+/g, '') + '.png';
+  },
+
   render: function () {
   
     var items = this.props.items.map(function (item) {
@@ -12,7 +16,7 @@ var Scene = React.createClass({
     var droppedItems = this.props.droppedItems.map(function (item) {
       return (
         <li key={item}>
-          <div>{item}</div>
+          <img src={this.getFilename(item)} alt={item} />
         </li>
       );
     });

@@ -18,14 +18,17 @@ var DragSourceItem = React.createClass({
     });
   },
   
+  getFilename: function(name) {
+    return 'items/' + name.toLowerCase().replace(/\s+/g, '') + '.png';
+  },
+  
   render: function () {
     var isDragging = this.getDragState('item').isDragging;
     
     return (
       <li {...this.dragSourceFor('item')} style={{ opacity: isDragging ? 0.2 : 1 }}>
-        <div>
-          {this.props.name}
-        </div>
+        <img src={this.getFilename(this.props.name)} alt={this.props.name} />
+        {this.props.name}
       </li>
     );
   }

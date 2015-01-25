@@ -114,7 +114,7 @@ section > .container {
   /*line-height: 100px;*/
 }
 
-.item-list li div {
+.item-list li img, .item-list li div {
   display: block;
   border-radius: 50%;
   width: 100px;
