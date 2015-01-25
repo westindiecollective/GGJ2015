@@ -16,6 +16,10 @@ var Scene = React.createClass({
         </li>
       );
     });
+    
+    if (droppedItems.length < 2) {
+      var dropzone = <DropZoneItem onDrop={this.props.onDropItem}></DropZoneItem>
+    }
   
     return (
       <section id='room'>
@@ -28,7 +32,7 @@ var Scene = React.createClass({
           <div className='drop-zone'>
             <ul className="item-list">
               {droppedItems}
-              <DropZoneItem onDrop={this.props.onDropItem}></DropZoneItem>
+              {dropzone}
             </ul>
           </div>
 
