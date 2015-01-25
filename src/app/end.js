@@ -24,7 +24,7 @@ var End = React.createClass({
   
   getInitialState: function () {
     return {
-      name: 'MacGyver, the best student ever'
+      name: window.username
     };
   },
   
