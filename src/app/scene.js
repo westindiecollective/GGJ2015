@@ -13,10 +13,12 @@ var Scene = React.createClass({
       return <DragSourceItem key={item} name={item}></DragSourceItem>;
     });
 
+    var self = this;
+
     var droppedItems = this.props.droppedItems.map(function (item) {
       return (
         <li key={item}>
-          <img src={this.getFilename(item)} alt={item} />
+          <img src={self.getFilename(item)} alt={item} />
         </li>
       );
     });

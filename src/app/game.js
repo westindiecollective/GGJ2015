@@ -100,7 +100,7 @@ var Game = React.createClass({
         result: this.state.challenge.combinations[0].result
       });
     } else {
-      this.transitionTo('end');
+      this.transitionTo('failure');
     }
   },
 
