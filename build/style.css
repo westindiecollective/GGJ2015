@@ -1,7 +1,6 @@
 body {
   background: #f5f5f5;
   min-height: 100%;
-  display: table;
   font-family: "Coustard", serif;
 }
 
@@ -14,21 +13,26 @@ h2 {
                -2px -2px 0 #E6CB08;
 }
 
-button {
+.button {
   border: none;
   /*background: #e5e5e5;*/
   padding: 10px 20px;
   border-radius: 5px;
+  text-decoration: none;
 }
 
-button {
+.button {
   color: #BE1B12;
   background: #E6CB08;
 }
 
-button:hover {
+.button:hover {
   background: #BE1B12;
   color: #E6CB08;
+}
+
+.root {
+  display: table;
 }
 
 section {
@@ -48,9 +52,49 @@ section {
 .container {
   margin: 10px;
   padding: 10px;
+}
+
+section > .container {
   background: #fff;
   box-shadow: 0 5px 10px #ddd;
   border: 1px solid #eee;
+}
+
+/* Home */
+
+.home {
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
+.home h1 {
+  font-size: 5em;
+  background: url('diyacademy-logo.png') no-repeat center center;
+  height: 500px;
+  color: transparent;
+}
+
+.home input[type=text] {
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+
+.home ul {
+  padding: 0;
+}
+
+.home ul li {
+  display: inline-block;
+  width: 33%;
+  color: #333;
+}
+
+.home ul li img {
+  width: 50%;
+  display: block;
+  margin: auto;
 }
 
 /* Item List */
