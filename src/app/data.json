@@ -1,8 +1,8 @@
 {
   "heading": [
-    "Okay rookie, ",
-    "Check this out, ",
-    "Guess what? "
+    "Okay rookie, you're",
+    "Check this out. You're",
+    "Guess what hotshot? You're"
   ],
 
   "response": [
@@ -78,107 +78,107 @@
   ],
 
   "location": [
-    "1st Class in DIY Academy",
-    "New York",
-    "Paris",
-    "Mexico",
-    "an old mine",
-    "a villa ruled by the mafia",
-    "the Jardin Moderne during a game jam",
-    "the Death Valley",
-    "a computer",
-    "a music festival",
-    "the Black Sea",
-    "a rap contenders",
+    "at DIY Academy",
+    "in New York",
+    "in Paris",
+    "in Mexico",
+    "in an old mine",
+    "at a villa ruled by the mafia",
+    "at the Jardin Moderne during a game jam",
+    "at Death Valley",
+    "in a computer",
+    "at a music festival",
+    "at the Black Sea",
+    "at a rap battle",
     "in a bar",
     "in the STUNFEST",
-    "a old town in a desert",
-    "a running train attacked by an helicopter",
-    "an hot-air balloon loosing altitude",
-    "a mad bus",
-    "a nazi submarine",
-    "an aerodrome"
+    "in an old desert town",
+    "in a running train being attacked by a helicopter",
+    "in a hot-air balloon loosing altitude",
+    "in a mad bus",
+    "in a nazi u-boat",
+    "in an aerodrome"
   ],
 
   "challenge": [
     {
-      "description": "A door is locked.",
+      "description": "the door is locked.",
       "combinaison": [
         {
           "items": ["pencil", "paper clip"],
-          "result": "Pencil and paper clip create a key which open the door"
+          "result": "The pencil and paper clip make a makeshift door key."
         }
       ]
     },
     {
-      "description": "A bomb is going to explode.",
+      "description": "a bomb is going to explode.",
       "combinaison": [
         {
           "items": ["cables", "screwdriver"],
-          "result": "No more trouble, the bomb is disable"
+          "result": "No problem, the bomb is disabled."
         }
       ]
     },
     {
-      "description": "A hostage situation is in progress.",
+      "description": "a hostage situation is in progress.",
       "combinaison": [
         {
           "items": ["poncho", "sombrero"],
-          "result": "Be incognito and knock out bad guys!"
+          "result": "You knock out the bad guys, incognito ninja style!"
         }
       ]
     },
     {
-      "description": "The mother Michelle has lost his cat.",
+      "description": "mother Michelle has lost her cat.",
       "combinaison": [
         {
           "items": ["fans", "fishes"],
-          "result": "The smell take back the cat."
+          "result": "The smell attracts the cat back home."
         }
       ]
     },
     {
-      "description": "There are nazis zombies who came from the dark side of the moon.",
+      "description": "there are nazis zombies who came from the dark side of the moon.",
       "combinaison": [
         {
           "items": ["lighter", "deodorant"],
-          "result": "I love the smell of burning zombies in the morning"
+          "result": "I love the smell of burning zombies in the morning!"
         }
       ]
     },
     {
-      "description": "Destroy the helicopters",
+      "description": "you need to take out the helicopters.",
       "combinaison": [
         {
           "items": ["laser", "magnifying glass"],
-          "result": "The helicopters have been destroyed by the concentrated laser"
+          "result": "The helicopters were destroyed by the focused laser."
         }
       ]
     },
     {
-      "description": "Save the president !",
+      "description": "you need to save the president!",
       "combinaison": [
         {
           "items": ["luggage", "mexicans"],
-          "result": "A mexican guy have save the president"
+          "result": "A mexican dude just saved the president!"
         }
       ]
     },
     {
-      "description": "Save the humanity.",
+      "description": "you need to save humanity!",
       "combinaison": [
         {
           "items": ["Godwin's law", "teacher"],
-          "result": "The humanity remember their history."
+          "result": "Humanity sadly remembers history."
         }
       ]
     },
     {
-      "description": "Kill the final boss, Chuck Norris",
+      "description": "you gotta face the final boss, Chuck Norris.",
       "combinaison": [
         {
           "items": ["Chuck Norris", "Chuck Norris"],
-          "result": "You have beat the game."
+          "result": "You beat the game. Oh yeah."
         }
       ]
     }
