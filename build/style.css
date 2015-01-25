@@ -14,6 +14,23 @@ h2 {
                -2px -2px 0 #E6CB08;
 }
 
+button {
+  border: none;
+  /*background: #e5e5e5;*/
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+button {
+  color: #BE1B12;
+  background: #E6CB08;
+}
+
+button:hover {
+  background: #BE1B12;
+  color: #E6CB08;
+}
+
 section {
   display: inline-block;
   vertical-align: top;
@@ -36,35 +53,88 @@ section {
   border: 1px solid #eee;
 }
 
-/* Objects */
-.objects {
+/* Item List */
+.item-list {
   text-align: center;
+  padding: 0;
 }
 
-.objects li {
+.item-list li {
   display: inline-block;
+  position: relative;
+  line-height: 100px;
+}
+
+.item-list li a {
+  display: block;
   border-radius: 50%;
   width: 100px;
   height: 100px;
   margin: 5px;
+  margin-left: 10px;
   text-align: center;
   line-height: 100px;
   background: #5A5FB7;
   color: #fff;
-  cursor: pointer;
+  text-decoration: none;
 }
 
-/* Dropzone */
-.dropzone {
+/* Drop-zone */
+.drop-zone {
   background: #eee;
   padding: 5px 10px;
   border-radius: 10px;
 }
 
-.dropzone p {
-  border: 5px dashed #ccc;
+.drop-zone .item-list li.empty a {
   text-align: center;
-  color: #ccc;
-  padding: 10px;
-  border-radius: 10px;
+  color: #bbb;
+  background: #ddd;
+}
+
+.drop-zone .item-list li.empty a span {
+  display: block;
+}
+
+.drop-zone .item-list li:not(:first-child) {
+  padding-left: 20px;
+}
+
+.drop-zone .item-list li:not(:first-child)::before {
+  content: "+";
+  position: absolute;
+  font-size: 48px;
+  left: 0;
+  padding: 5px 0;
+  color: #333;
+}
+
+.drop-zone .item-list li:last-child::before {
+  content: "=";
+}
+
+/* Diploma */
+
+#diploma {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#diploma .content {
+  font-family: arial;
+  position: absolute;
+  top: 385px;
+  left: 630px;
+  font-size: 100px;
+  width: 1515px;
+  height: 400px;
+  text-align: center;
+  display: table;
+}
+
+#diploma .content p {
+  margin: 0;
+  display: table-cell;
+  vertical-align: middle;
 }

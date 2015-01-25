@@ -1,10 +1,12 @@
-var React = require('react');
+var React = require('react'),
+    DragSourceItem = require('./drag-source-item'),
+    DropZoneItem = require('./drop-zone-item');
 
 var Scene = React.createClass({
   render: function () {
   
     var items = this.props.items.map(function (item) {
-      return <li key={item}><img alt={item} /></li>;
+      return <li key={item}><a><img alt={item} /></a></li>;
     });
   
     return (
@@ -19,12 +21,17 @@ var Scene = React.createClass({
             {items}
           </ul>
           
+          <DragSourceItem></DragSourceItem>
+          
+          <DropZoneItem></DropZoneItem>
+          
           <div className='drop-zone'>
-            <p>drop items here to craft</p>
-          </div>
-    
-          <div className='result'>
-            <p>{this.props.result}</p>
+            <ul className="item-list">
+              <li><a href=""><img alt="Ham"/></a></li>
+              <li><a href=""><img alt="BBQ"/></a></li>
+              <li className="empty"><a href=""><span>Drop here</span></a></li>
+              <li><a href="">{this.props.result}</a></li>
+            </ul>
           </div>
         </div>
       </section>
