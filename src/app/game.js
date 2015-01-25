@@ -15,7 +15,7 @@ var data = require('./data.json');
 var Game = React.createClass({
 
   getInitialState: function () {
-
+  
     var challenge = data.challenge[0];
     
     var items = utils.sample(data.items, 8)
