@@ -13,6 +13,7 @@ var Home = React.createClass({
     window.username = this.refs.usernameInput.getDOMNode().value;
     this.state.explosion1.play();
     this.state.opening.stop();
+    localStorage.setItem('username', this.refs.usernameInput.getDOMNode().value);
     this.transitionTo('game');
   },
   
