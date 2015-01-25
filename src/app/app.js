@@ -2,6 +2,7 @@ var React = require('react');
 var Router = require('react-router');
 var Route = Router.Route, DefaultRoute = Router.DefaultRoute,
     Link = Router.Link, RouteHandler = Router.RouteHandler;
+var Navigation = require('react-router').Navigation;
 
 var utils = require('./utils');
 
@@ -32,6 +33,13 @@ var App = React.createClass({
 });
 
 var Home = React.createClass({
+
+  mixins: [Navigation],
+  
+  start: function (e) {
+    e.preventDefault();
+    this.transitionTo('game');
+  },
   
   render: function() {
     return (
@@ -40,8 +48,11 @@ var Home = React.createClass({
         <p>
           Come and learn the best pratices to solve every problem in less time than a time bomb have to explode.
         </p>
-        <input type="text" placeholder="Username" />
-        <Link to="game" className='button'>Game</Link>
+        
+        <form onSubmit={this.start}>
+          <input type="text" placeholder="Username" />
+          <input type='submit' className='button'  value='Play' />
+        </form>
 
         <h2>Why join ?</h2>
         <ul>
