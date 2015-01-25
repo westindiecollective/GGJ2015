@@ -24,7 +24,7 @@ var End = React.createClass({
   
   getInitialState: function () {
     return {
-      name: window.username
+      name: localStorage.getItem('username')
     };
   },
   

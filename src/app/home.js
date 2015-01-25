@@ -8,7 +8,7 @@ var Home = React.createClass({
 
   start: function (e) {
     e.preventDefault();
-    window.username = this.refs.usernameInput.getDOMNode().value;
+    localStorage.setItem('username', this.refs.usernameInput.getDOMNode().value);
     this.transitionTo('game');
   },
   
