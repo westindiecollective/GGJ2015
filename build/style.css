@@ -35,8 +35,9 @@ h2 {
   color: #E6CB08;
 }
 
-.root {
+#root {
   display: table;
+  width: 100%;
 }
 
 section {
@@ -110,7 +111,7 @@ section > .container {
 .item-list li {
   display: inline-block;
   position: relative;
-  line-height: 100px;
+  /*line-height: 100px;*/
 }
 
 .item-list li div {
@@ -121,7 +122,7 @@ section > .container {
   margin: 5px;
   margin-left: 10px;
   text-align: center;
-  line-height: 100px;
+  /*line-height: 100px;*/
   background: #5A5FB7;
   color: #fff;
   text-decoration: none;
@@ -157,11 +158,13 @@ section > .container {
   color: #333;
 }
 
-.drop-zone .item-list li:last-child::before {
-  content: "=";
-}
-
 /* Diploma */
+
+.success {
+  margin: auto;
+  text-align: center;
+  display: block;
+}
 
 #diploma {
   position: absolute;

@@ -29,7 +29,6 @@ var Scene = React.createClass({
             <ul className="item-list">
               {droppedItems}
               <DropZoneItem onDrop={this.props.onDropItem}></DropZoneItem>
-              <li><a href="">{this.props.result}</a></li>
             </ul>
           </div>
 
