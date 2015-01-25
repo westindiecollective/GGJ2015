@@ -84,19 +84,60 @@ var Home = React.createClass({
 var Game = React.createClass({
 
   getInitialState: function () {
+
+    var challenge = data.challenge[0];
+    
+    var items = utils.sample(data.items, 8)
+      .concat(challenge.combinations[0].items)
+      .reduce(function(accum, current) {
+          if (accum.indexOf(current) < 0) {
+            accum.push(current);
+          }
+          return accum;
+        }, []);
+    
     return {
       counter: 1,
-      items: utils.sample(data.items, 8),
+      challenge: challenge,
+      items: items,
       droppedItems: [],
       success: false,
-      scene: "Lorem"
+      scene: [
+        utils.sample(data.heading, 1),
+        utils.sample(data.location, 1),
+        "and",
+        challenge.description        
+      ].join(' '),
+      result: ''
     };
   },
   
   nextChallenge: function () {
+
+    var challenge = data.challenge[this.state.counter];
+
+    var items = utils.sample(data.items, 8)
+      .concat(challenge.combinations[0].items)
+      .reduce(function(accum, current) {
+          if (accum.indexOf(current) < 0) {
+            accum.push(current);
+          }
+          return accum;
+        }, []);
+    
     this.setState({
       counter: this.state.counter + 1,
-      items: utils.shuffle(data.items)
+      challenge: challenge,
+      items: items,
+      droppedItems: [],
+      success: false,
+      scene: [
+        utils.sample(data.heading, 1),
+        utils.sample(data.location, 1),
+        "and",
+        challenge.description        
+      ].join(' '),
+      result: ''
     });
   },
   
@@ -105,8 +146,23 @@ var Game = React.createClass({
       items: this.state.items.filter(function (i) {
         return i != item.name;
       }),
-      droppedItems: this.state.droppedItems.concat(item.name),
-      success: true
+      droppedItems: this.state.droppedItems.concat(item.name)
+    });
+  },
+  
+  testCombination: function () {
+    
+    var droppedItems = this.state.droppedItems;
+    
+    var successes = this.state.challenge.combinations.filter(function (comb) {
+      return droppedItems.every(function (item) {
+        return comb.items.indexOf(item) != -1;
+      });
+    });
+        
+    this.setState({
+      success: successes.length > 0,
+      result: this.state.challenge.combinations[0].result
     });
   },
 
@@ -117,12 +173,14 @@ var Game = React.createClass({
           content={this.state.scene}
           onNext={this.nextChallenge}
           counter={this.state.counter}
-          success={this.state.success}></Story>
+          success={this.state.success}
+          result={this.state.result}></Story>
         <Scene
           items={this.state.items}
           droppedItems={this.state.droppedItems}
           result='&nbsp;'
-          onDropItem={this.droppedItem}></Scene>
+          onDropItem={this.droppedItem}
+          onTestCombination={this.testCombination}></Scene>
       </div>
     );
   }
