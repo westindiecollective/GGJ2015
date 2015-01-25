@@ -71,8 +71,13 @@
      "sub-machine gun",
      "striped jersey",
      "enigma machine",
-     "nazi zombies"
-     "Godwin's law"
+     "Godwin's law",
+     "screwdriver",
+     "fans",
+     "lighter",
+     "deodorant",
+     "laser",
+     "magnifying glass",
 
   ],
 
@@ -101,15 +106,83 @@
 
   "challenge": [
     {
-      "description": "",
+      "description": "A door is locked.",
       "combinaison": [
         {
-          "items": ["a", "b"],
-          "result": ""
-        },
+          "items": ["pencil", "paper clip"],
+          "result": "Pencil and paper clip create a key which open the door"
+        }
+      ]
+    },
+    {
+      "description": "A bomb is going to explode.",
+      "combinaison": [
         {
-          "items": [],
-          "results": ""
+          "items": ["cables", "screwdriver"],
+          "result": "No more trouble, the bomb is disable"
+        }
+      ]
+    },
+    {
+      "description": "A hostage situation is in progress.",
+      "combinaison": [
+        {
+          "items": ["poncho", "sombrero"],
+          "result": "Be incognito and knock out bad guys!"
+        }
+      ]
+    },
+    {
+      "description": "The mother Michelle has lost his cat.",
+      "combinaison": [
+        {
+          "items": ["fans", "fishes"],
+          "result": "The smell take back the cat."
+        }
+      ]
+    },
+    {
+      "description": "There are nazis zombies who came from the dark side of the moon.",
+      "combinaison": [
+        {
+          "items": ["lighter", "deodorant"],
+          "result": "I love the smell of burning zombies in the morning"
+        }
+      ]
+    },
+    {
+      "description": "Destroy the helicopters",
+      "combinaison": [
+        {
+          "items": ["laser", "magnifying glass"],
+          "result": "The helicopters have been destroyed by the concentrated laser"
+        }
+      ]
+    },
+    {
+      "description": "Save the president !",
+      "combinaison": [
+        {
+          "items": ["luggage", "mexicans"],
+          "result": "A mexican guy have save the president"
+        }
+      ]
+    },
+    {
+      "description": "Save the humanity.",
+      "combinaison": [
+        {
+          "items": ["Godwin's law", "teacher"],
+          "result": "The humanity remember their history."
+        }
+      ]
+    },
+    {
+      "description": "Kill the final boss, Chuck Norris",
+      "combinaison": [
+        {
+          "items": ["Chuck Norris", "Chuck Norris"],
+          "result": "You have beat the game."
         }
       ]
     }
