@@ -4,26 +4,27 @@ var React = require('react'),
 var DropZoneItem = React.createClass({
   mixins: [DragDropMixin],
   
-  configureDragDrop: function(registerType) {
-   return registerType('item', {
-     dragSource: {
-       beginDrag: function() {
-         console.log('Drag');
-         return {
-           item: {
-             name: this.props.name
-           }
-         };
-       }
-     }
-   });
- },
+  configureDragDrop(registerType) {
+    registerType('item', {
+      dropTarget: {
+        acceptDrop(item) {
+          console.log('You dropped an item !');
+        }
+      }
+    });
+  },
   
-  render: function () {
-    var isDragging = this.getDragState('item');
+  render() {
+    var dropState = this.getDropState('item'),
+        backgroundColor = '#222';
     
-    return <img alt="Drop zone test" style={{opacity: isDragging ? 0.2 : 1}} />
+    if(dropState.isHovering) {
+      backgroundColor = 'darkgreen';
+    } else if (dropState.isDragging) {
+      backgroundColor = 'darkkhaki';
+    }
+    
+    return <img alt="Drop zone test" style={{background: backgroundColor}} />;
   }
 });
-
 module.exports = DropZoneItem;

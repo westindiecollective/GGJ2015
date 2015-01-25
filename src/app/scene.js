@@ -1,4 +1,5 @@
 var React = require('react'),
+    DragSourceItem = require('./drag-source-item'),
     DropZoneItem = require('./drop-zone-item');
 
 var Scene = React.createClass({
@@ -19,6 +20,8 @@ var Scene = React.createClass({
           <ul className='item-list'>
             {items}
           </ul>
+          
+          <DragSourceItem></DragSourceItem>
           
           <DropZoneItem></DropZoneItem>
           
