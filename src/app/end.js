@@ -2,7 +2,13 @@ var React = require('react');
 var html2canvas = require('../../vendor/html2canvas');
 var jsPDF = require('../../vendor/jspdf.min.js');
 
+var Buzz = require('node-buzz');
+
 var End = React.createClass({
+  
+  playMusic: function() {
+    this.state.music.play();
+  },
   
   generatePDF: function() {
     this.setState({
@@ -24,7 +30,8 @@ var End = React.createClass({
   
   getInitialState: function () {
     return {
-      name: localStorage.getItem('username')
+      name: localStorage.getItem('username'),
+      music: new Buzz.sound("sounds/success", {formats: [ "mp3", "wav" ]}),
     };
   },
   
@@ -49,7 +56,7 @@ var End = React.createClass({
     }
     
     return (
-      <section className='success'>
+      <section className='success' onLoad={this.playMusic}>
         { diploma }
       </section>
     );
