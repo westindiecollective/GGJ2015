@@ -8,7 +8,7 @@ var Scene = React.createClass({
   },
 
   render: function () {
-  
+
     var items = this.props.items.map(function (item) {
       return <DragSourceItem key={item} name={item}></DragSourceItem>;
     });
@@ -22,19 +22,23 @@ var Scene = React.createClass({
         </li>
       );
     });
-    
+
     if (droppedItems.length < 2) {
       var dropzone = <DropZoneItem onDrop={this.props.onDropItem}></DropZoneItem>
     }
-  
+
+    if (droppedItems.length > 0) {
+      var doItButton = <button className='button' onClick={this.props.onTestCombination}>Do it!</button>
+    }
+
     return (
       <section id='room'>
         <div className='container'>
-                  
+
           <ul className='item-list'>
             {items}
           </ul>
-          
+
           <div className='drop-zone'>
             <ul className="item-list">
               {droppedItems}
@@ -43,8 +47,7 @@ var Scene = React.createClass({
           </div>
 
           <br />
-
-          <button className='button' onClick={this.props.onTestCombination}>Do it!</button>
+          {doItButton}
         </div>
       </section>
     );
