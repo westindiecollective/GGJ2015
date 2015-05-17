@@ -18,9 +18,9 @@ var Game = React.createClass({
   mixins: [Navigation],
 
   getInitialState: function () {
-  
+
     var challenge = data.challenge[0];
-    
+
     var items = utils.sample(data.items, 8)
       .concat(challenge.combinations[0].items)
       .reduce(function(accum, current) {
@@ -29,7 +29,7 @@ var Game = React.createClass({
           }
           return accum;
         }, []);
-    
+
     return {
       counter: 1,
       challenge: challenge,
@@ -40,12 +40,12 @@ var Game = React.createClass({
         utils.sample(data.heading, 1),
         utils.sample(data.location, 1),
         "and",
-        challenge.description        
+        challenge.description
       ].join(' '),
       result: ''
     };
   },
-  
+
   nextChallenge: function () {
 
     var challenge = data.challenge[this.state.counter];
@@ -58,7 +58,7 @@ var Game = React.createClass({
           }
           return accum;
         }, []);
-    
+
     this.setState({
       counter: this.state.counter + 1,
       challenge: challenge,
@@ -69,12 +69,12 @@ var Game = React.createClass({
         utils.sample(data.heading, 1),
         utils.sample(data.location, 1),
         "and",
-        challenge.description        
+        challenge.description
       ].join(' '),
       result: ''
     });
   },
-  
+
   droppedItem: function (item) {
     this.setState({
       items: this.state.items.filter(function (i) {
@@ -83,18 +83,18 @@ var Game = React.createClass({
       droppedItems: this.state.droppedItems.concat(item.name)
     });
   },
-  
+
   testCombination: function () {
-    
+
     var droppedItems = this.state.droppedItems;
-    
+
     var successes = this.state.challenge.combinations.filter(function (comb) {
       return droppedItems.every(function (item) {
         return comb.items.indexOf(item) != -1;
       });
     });
 
-    if (successes.length > 0) {       
+    if (successes.length > 0 && droppedItems.length > 1) {       
       this.setState({
         success: successes.length > 0,
         result: this.state.challenge.combinations[0].result
